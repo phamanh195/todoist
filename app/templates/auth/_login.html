@@ -1,0 +1,58 @@
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Please sign in</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <form action="{{ url_for('auth.login') }}" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        {% if not login_form.email.errors %}
+                            {{ login_form.email.label(class="col-form-label") }}
+                            {{ login_form.email(class="form-control") }}
+                        {% else %}
+                            {{ login_form.email.label(class="col-form-label") }}
+                            {{ login_form.email(class="form-control is-invalid") }}
+                            {% for error in login_form.email.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {% if not login_form.password.errors %}
+                            {{ login_form.password.label(class="col-form-label") }}
+                            {{ login_form.password(class="form-control") }}
+                        {% else %}
+                            {{ login_form.password.label(class="col-form-label") }}
+                            {{ login_form.password(class="form-control is-invalid") }}
+                            {% for error in login_form.password.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            {{ login_form.remember_me(class="form-check-input") }}
+                            {{ login_form.remember_me.label(class="form-check-label") }}
+                        </div>
+                    </div>
+                    <br/>
+                    <p>Forgot your password? <a href="{{ url_for('auth.password_reset_request') }}">Click here to reset it</a>.</p>
+                    <p>New user? <a href="{{ url_for('auth.register') }}">Click here to register</a>.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    {{ login_form.submit(class="btn btn-primary") }}
+                    {{ login_form.csrf_token }}
+                </div>
+            </form>
+      </div>
+    </div>
+  </div>

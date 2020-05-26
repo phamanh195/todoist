@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Method Not Allowed{% endblock %}
+
+{% block content %}
+<div class="mx-auto text-center mt-5">
+    <h1 class="my-2 text-danger">Method Not Allowed</h1>
+    <p>
+        The method is not allowed for the requested URL.
+    </p>
+    <a href="{{ url_for('main.index')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+        Return Home
+    </a>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% macro bs4_form_field(field, class='', placeholder='') %}
+    {% if request.method == 'GET' %}
+    {{ field.label }}
+    {{ field(class=class, placeholder=placeholder) }}
+    {% else %}
+        {% if not field.errors %}
+            {{ field.label }}
+            {{ field(class=class + ' is-valid', placeholder=placeholder) }}
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        {% else %}
+            {{ field.label }}
+            {{ field(class=class + ' is-invalid', placeholder=placeholder) }}
+            {% for error in field.errors %}
+            <div class="invalid-feedback">
+                {{ error }}
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+{% endmacro %}

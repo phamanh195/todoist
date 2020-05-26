@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Internal Server Error{% endblock %}
+
+{% block content %}
+<div class="mx-auto text-center mt-5">
+    <h1 class="my-2">Internal Server Error!</h1>
+    <a href="{{ url_for('main.index')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+        Return Home
+    </a>
+</div>
+{% endblock %}

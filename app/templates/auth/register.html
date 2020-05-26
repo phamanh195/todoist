@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+
+{% block title %}Register{% endblock %}
+
+
+
+{% block content %}
+<div class="p-4 text-center">
+    <img class="d-block mx-auto mb-3" src="{{ url_for('static', filename='logo2.png') }}" width="72" alt="TODO" />
+    <h2>Register</h2>
+</div>
+
+<form class="{% if request.method == 'POST' %}was-validated{% endif %}" action="" method="POST">
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            {{ macros.bs4_form_field(form.firstname, class="form-control", placeholder="Enter your first name") }}
+        </div>
+        <div class="col-md-6 mb-3">
+            {{ macros.bs4_form_field(form.lastname, class="form-control", placeholder="Enter your last name") }}
+        </div>
+    </div>
+    <div class="mb-3">
+        {{ macros.bs4_form_field(form.email, class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ macros.bs4_form_field(form.username, class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        {{ macros.bs4_form_field(form.password, class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ macros.bs4_form_field(form.password2, class="form-control") }}
+    </div>
+    <br />
+    {{ form.csrf_token }}
+    {{ form.submit(class="btn btn-primary btn-lg btn-block") }}
+</form>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Daily View{% endblock %}
+
+{% block content %}
+
+{% for date, notes in group_notes %}
+    <div class="mt-3">
+        <h4>
+            {% if date == date.today() %}
+            Today
+            {% else %}
+            {{ date.strftime('%d/%m/%y') }}
+            {% endif %}
+        </h4>
+        <br />
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: {{ current_user.completion_rate(notes) }}%;" aria-valuenow="{{ current_user.completion_rate(notes) }}" aria-valuemin="0" aria-valuemax="100">{{ current_user.completion_rate(notes) }}%</div>
+        </div>
+        <br />
+        <ul class="list-group text-break">
+            {% for note in notes %}
+                <li class="list-group-item d-inline">
+                    <a class="text-decoration-none {% if note.status %}text-success{% else %}text-dark{% endif %}" href="{{ url_for('.edit_note', id=note.id)}}">
+                        {{ note.note }}
+                    </a>
+                    <div class="btn-group float-right" role="group" aria-label="Basic example">
+                        {% if not note.status %}
+                        <a role="button" class="btn btn-outline-success btn-sm px-3" href="{{ url_for('.complete_note', id=note.id) }}">
+                            <svg class="bi bi-check" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+                    </div>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}
+
+{% endblock %}

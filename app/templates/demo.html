@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Favicon icon -->
+        <link rel="icon" href="../static/logo2.png" type="image/x-icon" />
+
+        <title>TODOIST</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="../static/logo2.png" width="35" alt="TODO" loading="lazy">
+                     TODO
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item px-1 active">
+                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Daily<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Project</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Analysis</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Login button
+                    <button type="button" class="btn btn-outline-primary px-md-3" data-toggle="modal" data-target="#loginModal">
+                        Login
+                    </button> -->
+                    <div class="dropdown">
+                        <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Account
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownAccount">
+                            <a class="dropdown-item" href="#">Change Password</a>
+                            <a class="dropdown-item" href="#">Change Email</a>
+                            <a class="dropdown-item" href="#">Edit Profile</a>
+                            <a class="dropdown-item" href="#">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="mt-3">
+                <h4>TODAY</h4>
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-9 col-lg-11">
+                            <input class="form-control" type="text" placeholder="e.g./ Buy gift tomorrow at 6pm">
+                        </div>
+                        <div class="col-3 col-lg-1">
+                        <button class="btn btn-success px-3 px-lg-4" type="submit">Add</button>
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+                <br />
+
+                <ul class="list-group text-break">
+                    <li class="list-group-item d-inline">Cras justo odio
+                        <div class="btn-group float-right" role="group" aria-label="Basic example">
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                Edit
+                            </a>
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                <svg class="bi bi-check" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-group-item">Dapibus ac facilisis in
+                        <div class="btn-group float-right" role="group" aria-label="Basic example">
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                Edit
+                            </a>
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                <svg class="bi bi-check" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-group-item">Morbi leo risus
+                        <div class="btn-group float-right" role="group" aria-label="Basic example">
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                Edit
+                            </a>
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                <svg class="bi bi-check" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-group-item">Porta ac consectetur ac
+                        <div class="btn-group float-right" role="group" aria-label="Basic example">
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                Edit
+                            </a>
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                <svg class="bi bi-check" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="list-group-item">Vestibulum at eros
+                        <div class="btn-group float-right" role="group" aria-label="Basic example">
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                Edit
+                            </a>
+                            <a role="button" class="btn btn-outline-success btn-sm px-3" href="#">
+                                <svg class="bi bi-check" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <form>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationServer01">First name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationServer02">Last name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationServer03">City</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer03" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationServer04">State</label>
+                    <select class="custom-select is-invalid" id="validationServer04" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Zip</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer05" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                    <label class="form-check-label" for="invalidCheck3">
+                      Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </form>
+        </div>
+        
+        
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>
