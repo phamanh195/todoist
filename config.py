@@ -55,7 +55,7 @@ class ProductionConfig(Config):
             mailhost=(cls.MAIL_SERVER, cls.MAIL_PORT),
             fromaddr=cls.MAIL_SENDER,
             toaddrs=[cls.MAIL_ADMIN],
-            subject=[cls.MAIL_SUBJECT_PREFIX] + ' Application Error',
+            subject=cls.MAIL_SUBJECT_PREFIX + ' Application Error',
             credentials=credentials,
             secure=secure
         )
